@@ -1,0 +1,60 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	background: #c7b39b url(../img/main.jpg); /* Цвет фона и путь к файлу */
+   color: #000; /* Цвет текста */
+}
+
+h1, h2, h3 {
+	 padding: 8px 0 4px;
+    border: 1px solid #075788;
+    border-width: 1px 0;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+}
+
+div.field{
+	position: absolute;
+	margin-left: 10%;
+	width: 80%;
+	height: 100%;
+	background: rgba(0, 170, 138, 0.9); /* Цвет фона */
+}
+
+div.recommendation {
+	margin-left: 30px;
+}
+
+ul.top-menu {
+	position: relative;
+	margin-left: 17%;
+}
+
+ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin-top:25px; /*делаем отступ сверху*/
+  /*background:#3A33FD; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+  height: 50px; /*задаем высоту*/
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#3A33FD; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
+  color:#fff; /*меняем цвет ссылок*/
+  padding:0px 15px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height:50px; /*ровняем меню по вертикали*/
+  display: block;
+  border-right: 1px solid #F36262; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+
+a:hover {
+  background:#D43737;/*добавляем эффект при наведении*/
+}
+li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+}
+
