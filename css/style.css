@@ -2,7 +2,7 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
 	background: #c7b39b url(../img/main.jpg); /* Цвет фона и путь к файлу */
-   color: #000; /* Цвет текста */
+   	color: #000; /* Цвет текста */
 }
 
 h1, h2, h3 {
