@@ -2,7 +2,7 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
 	background: #c7b39b url(../img/main.jpg); /* Цвет фона и путь к файлу */
-   color: #000; /* Цвет текста */
+   	color: #000; /* Цвет текста */
 }
 
 h1, h2, h3 {
@@ -109,12 +109,10 @@ ul.sub-menu a:hover {
   color: #fff; /* Цвет текста */
 }
 
-.input, .Clinics {
+.input {
   width: 50%;
-  padding: 8px 20px;
+  padding: 15px 20px;
   border-radius: 10px;
   background: #EEE;
   color: #333;
 }
-
-
