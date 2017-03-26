@@ -1,2 +1,0 @@
-if (window.loadAdFoxBundle) window.loadAdFoxBundle({"data": []});
-if (2346758401) { setTimeout(function(){document.close();},100); }
