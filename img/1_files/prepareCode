@@ -1,0 +1,66 @@
+/*
+* Note: Compatibility async embed codes; 21022017
+*/
+(function() {
+    function bannerFunction() {
+        document.getElementById('AdFox_banner_2078621611').innerHTML = '<div class="yandex_rtb_R-AF-131228-10" id="yandex_rtb_R-AF-131228-10_1728163070"></div>';
+        (function(w, d, n, s, t) {
+            w[n] = w[n] || [];
+            w[n].push(function() {
+                Ya.Context.AdvManager.render({
+                    blockId: "R-AF-131228-10",
+                    renderTo: "yandex_rtb_R-AF-131228-10_1728163070",
+                    statId: "",
+                    async: true,
+                    horizontalAlign: true,
+                    pageNumber: 1728163070,
+                    onRender: function (d) {
+                        try {
+                            if (document.all && !window.opera) {
+                                d = window.frames['AdFox_iframe_2078621611'].document;
+                            } else if (document.getElementById) {
+                                d = document.getElementById('AdFox_iframe_2078621611').contentDocument;
+                            }
+                        } catch (e) {}
+                        if (d) {
+                            setTimeout(function(){d.close();},10);
+                        }
+                        (new Image()).src = 'http://ads.adfox.ru/245167/event?rand=dysdyyc&p5=dnofx&p1=bulrw&pr=ejdaxxg&puid1=48&puid2=3000021&p2=fiau&puid3=2000030&lts=evjghaw&hash=249c34ea08abf7ce&pm=be';
+                    }
+                },
+                function (d, s, i, t) {
+                    i = 2078621611;
+                    document.getElementById('AdFox_banner_'+i).innerHTML = '';
+                    try {
+                        if (document.all && !window.opera) {
+                            d = window.frames['AdFox_iframe_'+i].document;
+                        } else if (document.getElementById) {
+                            d = document.getElementById('AdFox_iframe_'+i).contentDocument;
+                        }
+                    } catch (e) {}
+                    if (d) {
+                        t = d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0] || 0;
+                        if (t) {
+                            s = d.createElement('script');
+                            s.type = "text/javascript";
+                            s.src = 'http://ads.adfox.ru/245167/prepareCode?dl=3000021&p2=fiau&pct=d&pd=13&pli=a&plp=a&pop=a&pp=hvf&pr=1343982568&pr1=2078621611&prr=https%3A%2F%2Fwww.google.ru%2F&ps=cesh&pt=b&puid1=48&puid2=3000021&puid3=2000030&pv=11&pw=1&random=3872080481&lvlfrom=14';
+                            t.appendChild(s);
+                        } else {
+                            (new Image()).src = 'http://ads.adfox.ru/245167/event?rand=gpmhid&p5=dnofx&p1=bulrw&pr=ejdaxxg&puid1=48&puid2=3000021&p2=fiau&puid3=2000030&lts=evjghaw&hash=ebf7028d55a072c0&pm=bd';
+                        }
+                    } else {
+                        (new Image()).src = 'http://ads.adfox.ru/245167/event?rand=bjotumy&p5=dnofx&p1=bulrw&pr=ejdaxxg&puid1=48&puid2=3000021&p2=fiau&puid3=2000030&lts=evjghaw&hash=aa392ddde5e540a7&pm=bc';
+                    }                     
+                });
+            });
+            t = d.getElementsByTagName("script")[0];
+            s = d.createElement("script");
+            s.type = "text/javascript";
+            s.src = "//an.yandex.ru/system/context.js";
+            s.async = true;
+            t.parentNode.insertBefore(s, t);
+        })(this, this.document, "yandexContextAsyncCallbacks");
+    }
+
+    parent.eval(bannerFunction.toString().replace(/^.*{([\s\S]*)}.*$/mg, '$1'));
+})();

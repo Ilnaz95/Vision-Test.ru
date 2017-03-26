@@ -109,11 +109,12 @@ ul.sub-menu a:hover {
   color: #fff; /* Цвет текста */
 }
 
-.input {
+.input, .Clinics {
   width: 50%;
-  padding: 15px 20px;
+  padding: 8px 20px;
   border-radius: 10px;
   background: #EEE;
   color: #333;
 }
+
 
