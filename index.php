@@ -63,7 +63,6 @@ echo '<select class="Clinics">'; $i=0;
 foreach ($names[1] as $name) {
 	$str=substr($adress[1][$i], 27); $i++;
 	echo '<option>' . '"'. $name . '"' . $str . '</option>';
-
 }
 echo '</select>';
 ?>
