@@ -66,7 +66,6 @@ foreach ($names[1] as $name) {
 
 }
 echo '</select>';
-
 ?>
 
 
