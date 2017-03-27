@@ -54,23 +54,37 @@
 
 
 
-Список офтальмологических клиник Перми:
+<!-- Список офтальмологических клиник Перми:
 <?php
-$html = file_get_contents('C:\openserver\domains\Vision-Test.ru\1.txt');
+/*$html = file_get_contents('C:\openserver\domains\Vision-Test.ru\1.txt');
 preg_match_all('/\s+<a class="companies__item-title-text".*?>\s+(.+?)\s+<\/a>/', $html, $names);
 preg_match_all('/\s+<div class="companies__item-address">\s+(.+?)\s+<\/div>/', $html, $adress);
 echo '<select class="Clinics">'; $i=0;
 foreach ($names[1] as $name) {
 	$str=substr($adress[1][$i], 27); $i++;
 	echo '<option>' . '"'. $name . '"' . $str . '</option>';
-
 }
-echo '</select>';
+echo '</select>';*/
+?> -->
 
+
+<!-- PHP Simple HTML DOM Parser -->
+Список офтальмологических клиник Перми:
+<?php
+require_once 'simple_html_dom.php';
+$data = file_get_html('https://www.yell.ru/perm/top/glaznie-kliniki/');
+if($data->innertext!='' and count($data->find('.companies__item-title'))){
+	echo '<select class="Clinics" onchange="window.location.href=this.options[this.selectedIndex].value">'; $i=0;
+		foreach($data->find('.companies__item-title a') as $name){
+		$adress = $data->find('.companies__item-address', $i)->plaintext; $i++;
+		echo '<option value="https://www.yell.ru/'.$name->href.'">' . $name->plaintext . substr($adress, 52) .'</option>';
+  		}
+  		echo '</select>';
+}
+
+$data->clear();// подчищаем за собой
+unset($data);
 ?>
-
-
-
 
 
 
