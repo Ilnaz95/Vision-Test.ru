@@ -76,7 +76,7 @@ require_once 'simple_html_dom.php';
 $data = file_get_html('https://www.yell.ru/perm/top/glaznie-kliniki/');
 if($data->innertext!='' and count($data->find('.companies__item-title'))){
 	echo '<select class="Clinics" onchange="window.location.href=this.options[this.selectedIndex].value">'; $i=0;
-		foreach($data->find('h4.companies__item-title > a') as $name){
+		foreach($data->find('.companies__item-title ~ a') as $name){
 		$adress = $data->find('.companies__item-address', $i)->plaintext; $i++;
 		echo '<option value="https://www.yell.ru/'.$name->href.'">' . $name->plaintext . substr($adress, 52) .'</option>';
 		//echo '<option value="https://www.yell.ru/'.$name->href.'">' . $name->plaintext . '</option>';
