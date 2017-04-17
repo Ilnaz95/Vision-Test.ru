@@ -76,13 +76,16 @@ function validate($email, $name, $surname) {
     return $answer;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
     $valid = validate($_POST['email'],$_POST['name'], $_POST['surname']);
+	foreach ($valid as $key => $value) 
+	{
+		echo $value . '</br>';
+	}
 }
 
-foreach ($valid as $key => $value) {
-    echo $value . '</br>';
-}
+
 
 
 
