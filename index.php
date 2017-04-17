@@ -17,6 +17,7 @@
 <li><a href="#">Здоровье ваших глаз</a></li>
 <li><a href="#">Как видеть лучше?</a></li>
 <li><a href="#">Контакты</a></li>
+<li><a href="php/certificate.php">Получить сертификат</a></li>
 </ul><br>
 
 <div align="center">
@@ -42,7 +43,7 @@
 <li><a href="#">Проверка цветоощущения</a></li>
 <li><a href="#">Дуохромный тест</a></li>
 <li><a href="#">Лучистая фигура</a></li>
-</ul><br>
+</ul>
 
 <div class="block_eye_test1">
 <input type="submit" id="button1" name="button1" value=" Кнопка1 "/><br>
@@ -75,9 +76,10 @@ require_once 'simple_html_dom.php';
 $data = file_get_html('https://www.yell.ru/perm/top/glaznie-kliniki/');
 if($data->innertext!='' and count($data->find('.companies__item-title'))){
 	echo '<select class="Clinics" onchange="window.location.href=this.options[this.selectedIndex].value">'; $i=0;
-		foreach($data->find('.companies__item-title a') as $name){
+		foreach($data->find('h4.companies__item-title > a') as $name){
 		$adress = $data->find('.companies__item-address', $i)->plaintext; $i++;
 		echo '<option value="https://www.yell.ru/'.$name->href.'">' . $name->plaintext . substr($adress, 52) .'</option>';
+		//echo '<option value="https://www.yell.ru/'.$name->href.'">' . $name->plaintext . '</option>';
   		}
   		echo '</select>';
 }
