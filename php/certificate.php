@@ -29,9 +29,11 @@
  <div id="res"></div>
 
 
+
 <?
 require_once 'check.php';
 ?>
+
 
 
 
