@@ -14,21 +14,13 @@ $(document).ready(function () {
                 "name"    : $name,
                 "surname" : $surname
             },
-            success: function (res) {
-                res =  $.parseJSON(res);
-                $("#res").text("");
-                if (res.emailValid == false)
-                {
-                    $("#res").text(res.errorEmail);
-                }
-                if(res.nameValid == false)
-                {
-                    $("#res").text(res.errorName);
-                }
-                if(res.surnameValid == false)
-                {
-                    $("#res").text(res.errorSurname);
-                }
+            success: function (response) {
+                var res =  $.parseJSON(response);
+                var $res = $("#res");
+                $res.text('');
+                (res.emailValid == false)   ? $res.text(res.errorEmail)   : '';
+                (res.nameValid == false)    ? $res.text(res.errorName)    : '';
+                (res.surnameValid == false) ? $res.text(res.errorSurname) : '';
             },
             error: function (res) {
             }
