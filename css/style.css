@@ -5,7 +5,7 @@ body {
    	color: #000; /* Цвет текста */
 }
 
-h1, h2, h3 {
+h1, h3 {
 	 padding: 8px 0 4px;
     border: 1px solid #075788;
     border-width: 1px 0;
@@ -35,17 +35,14 @@ input[type=submit] {
     border-radius: 20px;
 }
 
-ul.top-menu {
+.top-menu {
+	margin: 0 auto;
 	position: relative;
-	margin-left: 8%;
-}
-
-ul {
-  list-style: none; /*убираем маркеры списка*/
+	list-style: none; /*убираем маркеры списка*/
   height: 50px; /*задаем высоту*/
 }
 
-a {
+.top-menu a {
   text-decoration: none; /*убираем подчеркивание текста ссылок*/
   background:#171616; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
   color:#fff; /*меняем цвет ссылок*/
@@ -59,11 +56,11 @@ a {
   -webkit-transition: all 0.3s 0.01s ease;
 }
 
-a:hover {
+.top-menu a:hover {
   background:#D43737;/*добавляем эффект при наведении*/
 }
 
-li {
+.top-menu li {
   float:left; /*Размещаем список горизонтально для реализации меню*/
 }
 
@@ -116,4 +113,145 @@ ul.sub-menu a:hover {
   border-radius: 10px;
   background: #EEE;
   color: #333;
+}
+
+body{
+	background-image: url(../images/grad.png);
+	background-size: 100%;
+}
+#visionTest{
+	/*outline: 1px solid #111111;*/
+	margin: 0 auto;
+	width: 1000px;
+}
+
+#sidebar{
+	/*outline: 1px solid #111111;*/
+	display:table;
+	margin: 0 auto;
+	padding:0;
+}
+ 
+ #sidebar ul{
+    list-style: none;
+    /*position: relative;
+    float: left;
+	left:50%;width:100%;*/
+    margin: 0 auto;
+	padding: 0;
+    display: inline-table;
+	
+ }
+ 
+ #sidebar ul li{	  
+    float: left;
+	  /*position: relative;right:50%; */
+}
+	
+#sidebar ul li a:hover{background: #2573a1;}
+#sidebar ul li a:active{background: #950AFF;}
+#sidebar ul li a{
+	background: #48a0d2;
+    display: table-cell; 
+    padding: 0;
+	height: 50px;
+	width: 192px;	
+	border: 1px dashed #d6e6ed;
+    color: #fdfeff;
+    font: italic bolder 14px "Times New Roman";
+	vertical-align: middle;
+    letter-spacing: normal;
+    text-decoration: none;
+	text-align: center;
+}
+
+#testArea{
+	/*outline: 1px solid #111111;*/
+	height: 577px;
+	background-color: #FFFFFF;
+	margin:0;
+	padding:0;
+}
+
+h2{
+    text-transform: uppercase;
+    color: #1F5787;
+    text-align:center;
+}
+
+ #idCP, #idDT, #idAst, #idVA, #idCS{
+    display:none;
+	margin: 0 auto;
+	padding: 0;
+	width: 960px;
+	height: 500px;
+	
+}
+
+#bVA1, #bVA2, #bVA3, #bVA4, #iIVA{
+	position: relative;
+}
+
+#bVA1{
+	top: 0;
+	left: 445px;
+}
+
+#bVA2{
+	top: 136px;
+	left: 436px;
+}
+
+#bVA3{
+	top: 272px; 
+	left: 230px;
+}
+
+#bVA4{
+	top: 136px;
+	left: 241px;
+}
+
+#iIVA{
+	top: 136px;
+	left: 157px;
+}
+
+#checkBox1{
+    display:block;
+}
+#checkBox2, #checkBox3{
+    display:none;
+}
+
+.textA{
+	background: #1F5787;
+	color: #FFFFFF;
+	width: 475px;
+	height: 56px;
+	font: 24px "Helvetica";
+	text-align: center;
+	margin:0;
+	padding:0;
+	/*outline: 1px solid #111111;*/
+}
+
+#clinics{
+	/*outline: 1px solid #111111;*/
+	float:left;
+	width: 475px;
+	margin:0;
+	padding:0;
+}
+
+#letter{
+	/*outline: 1px solid #111111;*/
+	float:right;
+	width: 475px;
+	margin:0;
+	padding:0;
+}
+
+#clearDiv{
+	clear: both;
 }
